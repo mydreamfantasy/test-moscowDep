@@ -1,0 +1,17 @@
+.item {
+  margin: 0;
+  padding: 11px 10px;
+  list-style-type: none;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.active {
+  color: #303030;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+}

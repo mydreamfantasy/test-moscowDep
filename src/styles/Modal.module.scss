@@ -1,0 +1,149 @@
+.overlay {
+  z-index: 100;
+  position: fixed;
+  overflow: auto;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  max-width: 851px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease-in-out;
+
+  div {
+    background-color: #e5e5e5;
+  }
+}
+
+.header {
+  position: relative;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.badge {
+  padding: 11px 10px;
+  background: #2b8580;
+  border: 1px solid #2b8580;
+  color: #e5e5e5;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+
+.button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 48px;
+  right: 52px;
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    width: 27px;
+    height: 2px;
+    background: #000000;
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+}
+
+.place {
+  margin: 0;
+  padding: 0;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: #888888;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  margin-left: 40px;
+  margin-bottom: 24px;
+  padding-right: 50px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+
+  color: #000000;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #2b8580;
+  padding: 32px 0;
+  margin-bottom: 24px;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+.boxTitle {
+  margin: 0;
+  padding: 0;
+  margin-left: 40px;
+  padding-bottom: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 146.28%;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.boxText {
+  margin: 0;
+  padding: 0;
+  margin-left: 40px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+}
+
+.desc {
+  margin: 0;
+  padding: 0;
+  margin-left: 40px;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  color: #000000;
+}
+
+.descText {
+  margin: 0;
+  padding: 0;
+  margin-left: 40px;
+  padding-right: 42px;
+  padding-bottom: 42px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
