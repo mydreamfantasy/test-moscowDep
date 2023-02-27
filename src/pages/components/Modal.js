@@ -1,6 +1,7 @@
 import styles from '@/styles/Modal.module.scss';
+// import React from 'react';
 
-export default function Modal({
+export default function Popup({
   setModal,
   country,
   city,
@@ -12,7 +13,6 @@ export default function Modal({
   object,
   solution,
 }) {
-  console.log(description);
   return (
     <div className={styles.overlay}>
       <div className={styles.container} onClick={(e) => e.stopPropagation()}>

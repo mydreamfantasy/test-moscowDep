@@ -4,6 +4,7 @@
     justify-self: center;
   }
 }
+
 .container {
   width: 248px;
   height: 100%;
@@ -12,6 +13,7 @@
   display: grid;
   grid-template-rows: 60px 1fr 30px;
 }
+
 .text {
   margin: 0;
   padding: 0;
@@ -23,6 +25,7 @@
   line-height: 20px;
   color: #888888;
 }
+
 .title {
   margin: 0 16px 28px;
   padding: 0;
@@ -31,6 +34,7 @@
   line-height: 22px;
   color: #303030;
 }
+
 .link {
   display: block;
   margin: 0;
@@ -47,7 +51,9 @@
   text-decoration: none;
   align-self: self-end;
   text-align: start;
+  cursor: pointer;
 }
+
 .badge {
   display: inline-block;
   font-style: italic;

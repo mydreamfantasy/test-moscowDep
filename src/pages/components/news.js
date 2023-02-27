@@ -1,14 +1,12 @@
 import React from 'react';
 import styles from '@/styles/News.module.scss';
 import dayjs from 'dayjs';
-import Modal from './modal';
+import Modal from './Modal';
+
 const humanizeReleaseDate = (date) => dayjs(date).format('DD.MM.YYYY');
 
 export default function News(props) {
-  console.log(props);
-  const { created, country, city, title } = props;
-
-  const date = props.created;
+  const { created, country, city, title, updated } = props;
 
   const [isModal, setModal] = React.useState(false);
 
@@ -20,11 +18,16 @@ export default function News(props) {
             {country}, {city}
           </p>
           <h2 className={styles.title}>{title}</h2>
-          <button onClick={() => setModal(true)} className={styles.link} href="">
+          <button onClick={() => setModal(true)} className={styles.link}>
             Посмотреть
           </button>
         </div>
-        <span className={styles.badge}>Добавлено {humanizeReleaseDate(created)}</span>
+
+        <span className={styles.badge}>
+          {updated
+            ? `Обновлено ${humanizeReleaseDate(updated)}`
+            : `Добавлено ${humanizeReleaseDate(created)}`}
+        </span>
       </li>
       {isModal && <Modal isModal={isModal} setModal={setModal} {...props} />}
     </>

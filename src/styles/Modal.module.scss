@@ -15,11 +15,22 @@
 .container {
   max-width: 851px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
   transition: all 0.5s ease-in-out;
 
   div {
     background-color: #e5e5e5;
+  }
+
+  @media (max-width: 900px) {
+    max-width: 700px;
+  }
+
+  @media (max-width: 700px) {
+    max-width: 500px;
+  }
+
+  @media (max-width: 520px) {
+    max-width: 100%;
   }
 }
 
@@ -46,8 +57,9 @@
   border: none;
   cursor: pointer;
   position: absolute;
-  top: 48px;
-  right: 52px;
+  top: 36px;
+  right: 50px;
+  padding: 20px;
 
   &::after,
   &::before {
@@ -55,6 +67,8 @@
     position: absolute;
     width: 27px;
     height: 2px;
+    top: 17px;
+    left: 7px;
     background: #000000;
   }
 
@@ -101,6 +115,11 @@
   li {
     list-style-type: none;
   }
+
+  @media (max-width: 520px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 }
 
 .boxTitle {
@@ -113,6 +132,10 @@
   line-height: 146.28%;
   text-transform: uppercase;
   color: #ffffff;
+
+  @media (max-width: 700px) {
+    margin-left: 20px;
+  }
 }
 
 .boxText {
@@ -123,6 +146,9 @@
   font-size: 14px;
   line-height: 17px;
   color: #ffffff;
+  @media (max-width: 700px) {
+    margin-left: 20px;
+  }
 }
 
 .desc {
