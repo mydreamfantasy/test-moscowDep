@@ -7,9 +7,6 @@ import news from '../data.json';
 
 export default function Home() {
   const [show, setShow] = React.useState(false);
-  const [filters, setFilters] = React.useState({
-    filters: '',
-  });
 
   const application = news.map((obj) => obj.application);
   const applicationSort = application.filter(function (item, pos) {
