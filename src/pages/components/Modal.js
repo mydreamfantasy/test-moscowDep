@@ -1,7 +1,7 @@
 import styles from '@/styles/Modal.module.scss';
-// import React from 'react';
+import DOMPurify from 'dompurify';
 
-export default function Popup({
+export default function Modal({
   setModal,
   country,
   city,
@@ -49,7 +49,10 @@ export default function Popup({
           </div>
           <div>
             <h3 className={styles.desc}>{direction}</h3>
-            <div className={styles.descText}>{description}</div>
+            <div
+              className={styles.descText}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(description) }}
+            ></div>
           </div>
         </div>
       </div>

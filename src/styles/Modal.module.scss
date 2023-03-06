@@ -1,20 +1,22 @@
 .overlay {
-  z-index: 100;
+  width: 100%;
+  height: 100%;
   position: fixed;
+  z-index: 100;
   overflow: auto;
-  width: 100vw;
-  height: 100vh;
   left: 0;
   top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba($color: #000000, $alpha: 0.5);
 }
 
 .container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  transform: translate(-50%, -50%);
   max-width: 851px;
-  height: 100%;
+  height: auto;
   transition: all 0.5s ease-in-out;
 
   div {
@@ -24,19 +26,24 @@
   @media (max-width: 900px) {
     max-width: 700px;
   }
-
+  @media (max-width: 769px) {
+    height: 100%;
+  }
   @media (max-width: 700px) {
     max-width: 500px;
+    height: 100%;
   }
 
   @media (max-width: 520px) {
     max-width: 100%;
+    height: 100%;
   }
 }
 
 .header {
   position: relative;
   padding: 40px;
+  padding-bottom: 22px;
   display: flex;
   justify-content: space-between;
 }
@@ -57,15 +64,15 @@
   border: none;
   cursor: pointer;
   position: absolute;
-  top: 36px;
-  right: 50px;
+  top: 34px;
+  right: 38px;
   padding: 20px;
 
   &::after,
   &::before {
     content: '';
     position: absolute;
-    width: 27px;
+    width: 34px;
     height: 2px;
     top: 17px;
     left: 7px;
@@ -78,6 +85,10 @@
 
   &::before {
     transform: rotate(-45deg);
+  }
+  @media (max-width: 520px) {
+    top: 41px;
+    right: 5px;
   }
 }
 
@@ -97,7 +108,7 @@
   padding: 0;
   margin-left: 40px;
   margin-bottom: 24px;
-  padding-right: 50px;
+  padding-right: 152px;
   font-weight: 700;
   font-size: 28px;
   line-height: 34px;
@@ -167,7 +178,7 @@
   padding: 0;
   margin-left: 40px;
   padding-right: 42px;
-  padding-bottom: 42px;
+  padding-bottom: 22px;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;

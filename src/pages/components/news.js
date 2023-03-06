@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '@/styles/News.module.scss';
 import dayjs from 'dayjs';
-import Modal from './Modal';
+import Modal from './modal';
 
 const humanizeReleaseDate = (date) => dayjs(date).format('DD.MM.YYYY');
 
