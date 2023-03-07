@@ -2,10 +2,18 @@ import React from 'react';
 import Head from 'next/head';
 import styles from '@/styles/Home.module.scss';
 import Filters from './components/filters';
+import newsJSON from '../data.json';
 import News from './components/news';
-import news from '../data.json';
 
-export default function Home() {
+export const getStaticProps = async () => {
+  const data = newsJSON;
+
+  return {
+    props: { news: data },
+  };
+};
+
+export default function Home({ news }) {
   const [show, setShow] = React.useState(false);
 
   const application = news.map((obj) => obj.application);
